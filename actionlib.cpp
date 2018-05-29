@@ -32,6 +32,11 @@ bool ActionLib::InsertData(QString name, int points)
     return d_func()->InsertDBData(name, points);
 }
 
+bool ActionLib::readData(QString name)
+{
+    return false;
+}
+
 ActionLib::~ActionLib()
 {
     if(d_ptr) {

@@ -17,6 +17,7 @@ public:
 public:
     bool CreateDBCon();
     bool InsertData(QString name, int points);
+    bool readData(QString name);
 
 private:
     Q_DECLARE_PRIVATE(ActionLib)
