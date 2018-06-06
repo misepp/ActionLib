@@ -1,5 +1,7 @@
 #include "actionlib.h"
 #include <QObject>
+#include <QVariant>
+#include <QList>
 //#include <QSqlDatabase>
 //#include <QSqlQuery>
 
@@ -29,12 +31,12 @@ bool ActionLib::CreateDBCon()
 
 bool ActionLib::InsertData(QString name, int points)
 {
-    return d_func()->InsertDBData(name, points);
+    return d_func()->insertDBData(name, points);
 }
 
-bool ActionLib::readData(QString name)
+QVariant ActionLib::readData(QString name)
 {
-    return false;
+    return d_func()->readDBData(name);
 }
 
 ActionLib::~ActionLib()

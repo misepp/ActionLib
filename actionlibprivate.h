@@ -4,7 +4,7 @@
 #include <QObject>
 #include "actionlib.h"
 
-class ActionLibPrivate
+class ActionLibPrivate : public QObject
 {
 public:
     explicit ActionLibPrivate();
@@ -15,7 +15,8 @@ private:
 
 public:
     bool createDBConnection();
-    bool InsertDBData(QString name, int points);
+    bool insertDBData(QString name, int points);
+    QVariant readDBData(QString name);
     void CloseDB();
 
 private:

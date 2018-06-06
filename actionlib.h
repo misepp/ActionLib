@@ -5,6 +5,8 @@
 #include "sharedlib_global.h"
 
 class ActionLibPrivate;
+class QVariant;
+class QString;
 
 class MYSHAREDLIB_EXPORT ActionLib : public QObject
 {
@@ -17,7 +19,7 @@ public:
 public:
     bool CreateDBCon();
     bool InsertData(QString name, int points);
-    bool readData(QString name);
+    QVariant readData(QString name);
 
 private:
     Q_DECLARE_PRIVATE(ActionLib)
