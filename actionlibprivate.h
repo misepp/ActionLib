@@ -1,10 +1,9 @@
 #ifndef ACTIONLIBPRIVATE_H
 #define ACTIONLIBPRIVATE_H
 
-#include <QObject>
 #include "actionlib.h"
 
-class ActionLibPrivate : public QObject
+class ActionLibPrivate
 {
 public:
     explicit ActionLibPrivate();
